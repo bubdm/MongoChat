@@ -23,6 +23,7 @@ namespace Chat.WindowClient
         public Login()
         {
             InitializeComponent();
+            this.LoginName.Focus();
         }
 
         private void btnClickLogin(object sender, RoutedEventArgs e)

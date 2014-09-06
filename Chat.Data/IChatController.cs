@@ -1,4 +1,6 @@
-﻿using Chat.Models;
+﻿using System;
+using System.Collections.Generic;
+using Chat.Models;
 
 namespace Chat.Data
 {
@@ -7,5 +9,9 @@ namespace Chat.Data
         void AddPost(Post post);
 
         void AddUser(User user);
+
+        List<Post> GetPosts(DateTime startDate, DateTime endDate);
+
+        List<Post> GetAllPosts();
     }
 }

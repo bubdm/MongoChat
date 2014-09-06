@@ -70,12 +70,26 @@ namespace Chat.WindowClient
 
         private void ShowSessionPostOnClick(object sender, RoutedEventArgs e)
         {
-
+            List<Post> posts = this.chat.GetPosts(this.user.LoggedTimeFrom, DateTime.Now);
+            FormatingPost(posts);
         }
 
         private void ShowAllPostonClick(object sender, RoutedEventArgs e)
         {
+            var posts = this.chat.GetAllPosts();
+            FormatingPost(posts);
+        }
 
+        private void FormatingPost(List<Post> posts)
+        {
+            this.AllPost.Text = "";
+            foreach (var post in posts)
+            {
+                var formattedDate = post.PostOn.ToLocalTime().ToString("dd.MM.yyyy hh:mm:ss");
+                string res = string.Format("[{0}] {1}: {2}", formattedDate, post.PostedByUser, post.Content);
+                this.AllPost.Text += (this.AllPost.Text.Length > 0 ? Environment.NewLine : string.Empty) + res;
+            }
+            this.AllPost.ScrollToEnd();
         }
     }
 }
