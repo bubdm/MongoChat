@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Chat.WindowClient.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Login" Height="92" Width="474">
+        Title="Login" Height="92" Width="474" Icon="Images/chat-logo.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox 
             x:Name="LoginName" 
