@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.ConsoleClient
+namespace Chat.Controller
 {
-    class Program
+    public class ChatControllerBase
     {
-        static void Main(string[] args)
+        private readonly MongoDbContext DbContext;
+        public ChatControllerBase()
         {
+
         }
     }
 }

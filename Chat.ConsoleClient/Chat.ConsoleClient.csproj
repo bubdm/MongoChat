@@ -41,11 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ConsoleClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chat.Data\Chat.Data.csproj">
+      <Project>{9180f17d-0676-4ad1-bf7d-a4118fc55295}</Project>
+      <Name>Chat.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chat.Models\Chat.Models.csproj">
+      <Project>{96f4fbb1-05f9-4595-a24e-47570fc71680}</Project>
+      <Name>Chat.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

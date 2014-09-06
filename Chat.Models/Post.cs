@@ -18,7 +18,11 @@ namespace Chat.Models
 
         public DateTime PostOn { get; set; }
 
-        public User PostedBy { get; set; }
-    }
+        public string PostedByUser { get; set; }
 
+        public bool IsValidContect()
+        {
+            return string.IsNullOrEmpty(this.Content);
+        }
+    }
 }
